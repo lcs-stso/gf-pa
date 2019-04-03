@@ -14,6 +14,33 @@ public class Cat extends Actor
      */
     public void act() 
     {
-        // Add your action code here.
+        // Get an object reference to our world 
+        ForestWorld world = (ForestWorld) getWorld();
+        if(isTouching(Fries.class))
+        {
+        
+        }
+        
+         if(Greenfoot.isKeyDown("left")){
+            int x = getX();
+            int y = getY();
+            setLocation(x-5, y);
+        }
+        if(Greenfoot.isKeyDown("right")){
+            int x = getX();
+            int y = getY();
+            setLocation(x+5, y);
+        }
+        
+         if(Greenfoot.isKeyDown("up")){
+            int x = getX();
+            int y = getY();
+            setLocation(x, y-5);
+        }
+        if(Greenfoot.isKeyDown("down")){
+            int x = getX();
+            int y = getY();
+            setLocation(x, y+5);
+        }    
     }    
 }

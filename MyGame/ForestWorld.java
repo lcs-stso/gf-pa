@@ -20,4 +20,8 @@ public class ForestWorld extends World
         
         
     }
+    public void act()
+    {
+    
+    }
 }
