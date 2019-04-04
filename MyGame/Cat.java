@@ -18,10 +18,10 @@ public class Cat extends Actor
         ForestWorld world = (ForestWorld) getWorld();
         if(isTouching(Fries.class))
         {
-        
+
         }
-        
-         if(Greenfoot.isKeyDown("left")){
+
+        if(Greenfoot.isKeyDown("left")){
             int x = getX();
             int y = getY();
             setLocation(x-5, y);
@@ -31,8 +31,8 @@ public class Cat extends Actor
             int y = getY();
             setLocation(x+5, y);
         }
-        
-         if(Greenfoot.isKeyDown("up")){
+
+        if(Greenfoot.isKeyDown("up")){
             int x = getX();
             int y = getY();
             setLocation(x, y-5);
@@ -41,6 +41,12 @@ public class Cat extends Actor
             int x = getX();
             int y = getY();
             setLocation(x, y+5);
+        }  
+
+        if ( isTouching(Bear.class) ) 
+        {
+
+            Greenfoot.playSound("Meow.wav");
         }    
-    }    
+    }
 }
