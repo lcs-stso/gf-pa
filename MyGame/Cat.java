@@ -16,9 +16,9 @@ public class Cat extends Actor
     {
         // Get an object reference to our world 
         ForestWorld world = (ForestWorld) getWorld();
-        if(isTouching(Fries.class))
+        if(isTouching(Fish.class))
         {
-
+         removeTouching(Fish.class);
         }
 
         if(Greenfoot.isKeyDown("left")){

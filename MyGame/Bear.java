@@ -15,7 +15,7 @@ public class Bear extends Actor
     public void act() 
     {
         turnAtEdge();
-        move(4);
+        move(2);
         randomTurn();
     }   
 
