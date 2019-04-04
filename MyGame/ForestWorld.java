@@ -34,12 +34,20 @@ public class ForestWorld extends World
         addObject(theBear4,300,370);
         Bear theBear5 = new Bear();
         addObject(theBear5,150,50);
-
+        
+        // Set the initial score
+        String currentScore = "Score: 0";
+        showText(currentScore, 500, 50);
     }
 
     public void act()
     {
         
+         if ((frames % 60) == 0)
+        {
+            String timeElapsed = "Time: " + Integer.toString(frames / 60);
+            showText(timeElapsed, 100, 50);
+        }
         // Increment frame (roughly 60 frames per second)
         frames = frames + 1;
         
@@ -66,7 +74,7 @@ public class ForestWorld extends World
         {          
             Greenfoot.stop();  
              String GameEnd = "GameOver";
-            showText(GameEnd, 400, 200);
+            showText(GameEnd, 300, 200);
         }  
        
     }
