@@ -43,7 +43,14 @@ public class ForestWorld extends World
         // Increment frame (roughly 60 frames per second)
         frames = frames + 1;
         
-        
+        //every 2 seconds,add Fries
+        if ((frames % 120) == 0)
+        { 
+            Fries myFries = new Fries();
+            int x = Greenfoot.getRandomNumber(600);
+            int y = Greenfoot.getRandomNumber(400);
+            addObject(myFries, x, y);
+        }
    
         //every 4 seconds,add a fish 
         if ((frames % 240) == 0)
@@ -54,6 +61,14 @@ public class ForestWorld extends World
             addObject(myFish, x, y);
         }
 
+        // After 60 seconds, end the game 
+        if (frames == 3600 )
+        {          
+            Greenfoot.stop();  
+             String GameEnd = "GameOver";
+            showText(GameEnd, 400, 200);
+        }  
+       
     }
 
 }

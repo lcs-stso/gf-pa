@@ -20,6 +20,11 @@ public class Cat extends Actor
         {
          removeTouching(Fish.class);
         }
+        
+        if(isTouching(Fries.class))
+        {
+         removeTouching(Fries.class);
+        }
 
         if(Greenfoot.isKeyDown("left")){
             int x = getX();
