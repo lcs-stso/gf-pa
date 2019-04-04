@@ -8,7 +8,10 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class ForestWorld extends World
 {
-
+    //Track time going up 
+    private int frames = 0;
+    //Track the score 
+    private int score = 0; 
     /**
      * Constructor for objects of class ForestWorld.
      * 
@@ -31,12 +34,25 @@ public class ForestWorld extends World
         addObject(theBear4,300,370);
         Bear theBear5 = new Bear();
         addObject(theBear5,150,50);
-        
+
     }
 
     public void act()
     {
-    
+        
+        // Increment frame (roughly 60 frames per second)
+        frames = frames + 1;
+        
+        
+   
+        //every 4 seconds,add a fish 
+        if ((frames % 240) == 0)
+        { 
+            Fish myFish = new Fish();
+            int x = Greenfoot.getRandomNumber(600);
+            int y = Greenfoot.getRandomNumber(400);
+            addObject(myFish, x, y);
+        }
 
     }
 
