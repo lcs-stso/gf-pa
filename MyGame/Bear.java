@@ -15,35 +15,24 @@ public class Bear extends Actor
     public void act() 
     {
         turnAtEdge();
+        move(4);
         randomTurn();
-        move(5);
-        lookForCat();
-    }    
-    public void lookForCat()
+    }   
+
+    public void turnAtEdge()
     {
-       if (isTouching(Cat.class))
-       {
-         removeTouching(Cat.class);  
-        }
-    }
-    
- public void turnAtEdge()
-   {
         if ( isAtEdge() ) 
         {
-         turn(17);
-         
+            turn(17);
         }
-        
+
     }
- public void randomTurn()
-   {
-           
-        if (Greenfoot.getRandomNumber(100)<10)
+    public void randomTurn()
+    {
+        if (Greenfoot.getRandomNumber(100) >90) 
         {
-         turn(Greenfoot.getRandomNumber(90)-45);
-            
+            turn(Greenfoot.getRandomNumber(90)-45);
+        }
     }
-   }
 }
 
