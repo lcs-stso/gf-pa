@@ -8,11 +8,14 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Fish extends Actor
 {
+
     private int frames = 0;
+
     /**
      * Act - do whatever the Fish wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+
     public void act() 
     {
         // Get an object reference to our world 
@@ -24,5 +27,6 @@ public class Fish extends Actor
             world.removeObject(this);
         }
 
-    }    
+    }  
+
 }

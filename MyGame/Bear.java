@@ -15,7 +15,7 @@ public class Bear extends Actor
     public void act() 
     {
         turnAtEdge();
-        move(2);
+        move(1);
         randomTurn();
     }   
 
@@ -27,6 +27,7 @@ public class Bear extends Actor
         }
 
     }
+
     public void randomTurn()
     {
         if (Greenfoot.getRandomNumber(100) >90) 

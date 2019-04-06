@@ -9,6 +9,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Fries extends Actor
 {
     private int frames = 0; 
+    
+    
     /**
      * Act - do whatever the Fries wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -24,5 +26,6 @@ public class Fries extends Actor
             world.removeObject(this);
         }
 
-    }    
+    }  
+     
 }

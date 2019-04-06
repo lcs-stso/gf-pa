@@ -18,12 +18,14 @@ public class Cat extends Actor
         ForestWorld world = (ForestWorld) getWorld();
         if(isTouching(Fish.class))
         {
-         removeTouching(Fish.class);
+            world.FishEaten();
+            removeTouching(Fish.class);
         }
-        
+
         if(isTouching(Fries.class))
         {
-         removeTouching(Fries.class);
+            world.FriesEaten();
+            removeTouching(Fries.class);
         }
 
         if(Greenfoot.isKeyDown("left")){
@@ -50,8 +52,8 @@ public class Cat extends Actor
 
         if ( isTouching(Bear.class) ) 
         {
-
             Greenfoot.playSound("Meow.wav");
+            world.BearTouched();
         }    
     }
 }

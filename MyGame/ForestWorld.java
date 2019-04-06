@@ -11,7 +11,13 @@ public class ForestWorld extends World
     //Track time going up 
     private int frames = 0;
     //Track the score 
-    private int score = 0; 
+    private int Score = 0; 
+    //Track Fish Eaten 
+    private int FishEaten = 0; 
+    //Track Fries Eaten 
+    private int FriesEaten= 0; 
+    //Track Bear Touched 
+    private int BearTouched =0; 
     /**
      * Constructor for objects of class ForestWorld.
      * 
@@ -34,7 +40,7 @@ public class ForestWorld extends World
         addObject(theBear4,300,370);
         Bear theBear5 = new Bear();
         addObject(theBear5,150,50);
-        
+
         // Set the initial score
         String currentScore = "Score: 0";
         showText(currentScore, 500, 50);
@@ -42,15 +48,15 @@ public class ForestWorld extends World
 
     public void act()
     {
-        
-         if ((frames % 60) == 0)
+
+        if ((frames % 60) == 0)
         {
             String timeElapsed = "Time: " + Integer.toString(frames / 60);
             showText(timeElapsed, 100, 50);
         }
         // Increment frame (roughly 60 frames per second)
         frames = frames + 1;
-        
+
         //every 2 seconds,add Fries
         if ((frames % 120) == 0)
         { 
@@ -59,7 +65,7 @@ public class ForestWorld extends World
             int y = Greenfoot.getRandomNumber(400);
             addObject(myFries, x, y);
         }
-   
+
         //every 4 seconds,add a fish 
         if ((frames % 240) == 0)
         { 
@@ -73,10 +79,32 @@ public class ForestWorld extends World
         if (frames == 3600 )
         {          
             Greenfoot.stop();  
-             String GameEnd = "GameOver";
+            String GameEnd = "GameOver";
             showText(GameEnd, 300, 200);
-        }  
-       
+        } 
     }
-
+    //Add to fish eaten 
+    void FishEaten()
+    {
+        Score = Score +50;
+        //Update the score 
+        String currentScore = "Score: " + Integer.toString(Score);
+        showText(currentScore, 500, 50); 
+    }
+    //Add to fries eaten 
+    void FriesEaten()
+    {
+        Score = Score - 30;
+        //Update the score 
+        String currentScore = "Score: " + Integer.toString(Score);
+        showText(currentScore, 500, 50); 
+    }
+    //Add to BearTouched 
+    void BearTouched()
+    {
+        Score = Score - 5;
+        //Update the score 
+        String currentScore = "Score: " + Integer.toString(Score);
+        showText(currentScore, 500, 50); 
+    }
 }
