@@ -31,15 +31,15 @@ public class ForestWorld extends World
         addObject(theCat,300,250);
         //Create bears in the screen 
         Bear theBear = new Bear();
-        addObject(theBear,400,200);
+        addObject(theBear,10,200);
         Bear theBear2 = new Bear();
-        addObject(theBear2,200,250);
+        addObject(theBear2,500,250);
         Bear theBear3 = new Bear();
-        addObject(theBear3,150,50);
+        addObject(theBear3,100,50);
         Bear theBear4 = new Bear();
-        addObject(theBear4,300,370);
+        addObject(theBear4,30,370);
         Bear theBear5 = new Bear();
-        addObject(theBear5,150,50);
+        addObject(theBear5,200,50);
 
         // Set the initial score
         String currentScore = "Score: 0";
