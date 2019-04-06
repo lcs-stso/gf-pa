@@ -18,6 +18,8 @@ public class ForestWorld extends World
     private int FriesEaten= 0; 
     //Track Bear Touched 
     private int BearTouched =0; 
+    
+    private boolean gameOn; 
     /**
      * Constructor for objects of class ForestWorld.
      * 
@@ -81,7 +83,8 @@ public class ForestWorld extends World
             Greenfoot.stop();  
             String GameEnd = "GameOver";
             showText(GameEnd, 300, 200);
-        } 
+        }
+      
     }
     //Add to fish eaten 
     void FishEaten()
@@ -107,4 +110,6 @@ public class ForestWorld extends World
         String currentScore = "Score: " + Integer.toString(Score);
         showText(currentScore, 500, 50); 
     }
+    
+    
 }
